@@ -125,10 +125,27 @@ def plot_mean_trends(df_trend, res, stats = ['mean', 'std', 'median', 'min', 'ma
     plt.close()
     return fig.fig
 
+
+def plot_RMSE(df_trend, res):
+    df_real = df_trend.loc[df_trend['type'] == 'Real', :].drop(columns = ['type', 'time'])
+    df_synth = df_trend.loc[df_trend['type'] == 'Synthetic', :].drop(columns = ['type', 'time'])
+    rmse = ((df_real - df_synth)**2).mean().apply(lambda x: np.sqrt(x))
+    df_rmse = (pd.DataFrame(rmse, columns = ['value']).reset_index().rename(columns = {'index': 'statistic'}))
+    fig, ax = plt.subplots()
+    sns.barplot(data = df_rmse, x = 'statistic', y = 'value', ax = ax)
+    for container in ax.containers:
+        ax.bar_label(container, fmt = '%.3f', fontsize = 7, padding = 3)
+    ax.set_title(f'RMSE ({res}ly trend)'.replace('day', 'dai'), fontweight = 'bold')
+    ax.set_ylabel('value')
+    plt.tight_layout()
+    plt.close()
+    return df_rmse, fig
+
 ########################################################################################################################
 
 def create_plots(df_real, df_synth, outputPath = Path.cwd() / 'plots'):
     fig_dict = {}
+    rmse_dict = {}
 
     # Value distributions
     fig_dict['distrib_all_profiles'] = plot_distrib(df_real, df_synth)
@@ -146,8 +163,11 @@ def create_plots(df_real, df_synth, outputPath = Path.cwd() / 'plots'):
         # Mean trends
         fig_dict[f'{res}ly_trend'.replace('day', 'dai')] = plot_mean_trends(df_trend, res)
 
+        # RMSE
+        rmse_dict[f'RMSE_{res}ly_trend'.replace('day', 'dai')], fig_dict[f'RMSE_{res}ly_trend'.replace('day', 'dai')] = plot_RMSE(df_trend, res)
+
     outputPath = outputPath / datetime.today().strftime('%Y-%m-%d_%H%M')
     outputPath.mkdir(parents = True, exist_ok = True)
     for key, value in fig_dict.items():
         value.savefig(outputPath / f'{key}.png', bbox_inches = 'tight')
-    return fig_dict
+    return fig_dict, rmse_dict
