@@ -92,8 +92,8 @@ Model architecture decisions...
 </details>
 
 <h2>Acknowledgement</h2>
-<a href="https://www.mdpi.com/2079-9292/11/3/355">Synthetic Energy Data Generation Using Time Variant Generative Adversarial Network</a>
-<a href="https://github.com/stefan-jansen/machine-learning-for-trading/tree/main/21_gans_for_synthetic_time_series">Generative Adversarial Nets for Synthetic Time Series Data</a>
+<a href="https://www.mdpi.com/2079-9292/11/3/355">Synthetic Energy Data Generation Using Time Variant Generative Adversarial Network</a></br>
+<a href="https://github.com/stefan-jansen/machine-learning-for-trading/tree/main/21_gans_for_synthetic_time_series">Generative Adversarial Nets for Synthetic Time Series Data</a></br>
 
 <h2>Team Members:</h2>
 Balint Decsi</br>
