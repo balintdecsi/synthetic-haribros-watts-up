@@ -4,9 +4,15 @@
 ## Intro
 Introducing **SYNTHETIC HARIBROS** Team solution
 
-
 ## Features
 ### 1. Time-Variant GAN
+* Minibatch predictions 
+
+* Detect unusual patterns 
+
+* Learn complex patterns 
+
+* Discriminator teaches the Generator until we find optimums for synthetic data
 
 ### 2. Generator and Discriminator Loss Functions
 
