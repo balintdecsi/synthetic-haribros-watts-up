@@ -84,12 +84,16 @@ Model architecture decisions...
     • After cca. step  875 losses diverge in multiple scenarios(5;6)</br>
     • Early stopping is very difficult due to volatility</br>
     • Semi-Manual optimums should be used</br>
-</details>
 
 <h2>End result</h2>
     • After cca. step  875 losses diverge in multiple scenarios(5;6)</br> 
     • Early stopping is very difficult due to volatility</br>
     • Manual optimums should be used</br>
+</details>
+
+<h2>Acknowledgement</h2>
+<a href="https://www.mdpi.com/2079-9292/11/3/355">Synthetic Energy Data Generation Using Time Variant Generative Adversarial Network</a></br>
+<a href="https://github.com/stefan-jansen/machine-learning-for-trading/tree/main/21_gans_for_synthetic_time_series">Generative Adversarial Nets for Synthetic Time Series Data</a></br>
 
 <h2>Team Members:</h2>
 Balint Decsi</br>
