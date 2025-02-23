@@ -6,6 +6,9 @@ Introducing **SYNTHETIC HARIBROS** Team solution
 
 ## Features
 ### 1. Time-Variant GAN
+
+![gan](./images/gan.png)
+
 * Minibatch predictions</br>
 * Detect unusual patterns</br>
 * Learn complex patterns</br>
