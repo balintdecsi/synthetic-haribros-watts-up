@@ -1,17 +1,28 @@
-# hackathon-watts-up
+![logo](./images/haribros.png)
+==================
 
-End of the challenge: 23.02.2025 12:15
-
-To hand in the results please follow the following steps:
-1) Decide for a Team name
-2) Tell the mentors your team name so they can note down the members of each team
-3) Send a link to the github repo to one of the mentors
-4) Upload the synthetic data file on to the OneDrive folder where you downloaded the real data
-5) Name the synthetic data file after your group
-6) The synthetic data file should be in csv format, contain the datetime in the first column and every other column should represent a profile. (mMirroring the original dataset)
-7) upload your presentation to the OneDrive folder with your team name
+## Intro
+Introducing **SYNTHETIC HARIBROS** Team solution
 
 
+## Features
+### 1. Time-Variant GAN
 
+### 2. Generator and Discriminator Loss Functions
 
+## Getting Started
 
+To recreate our application, the easiest way to get started is to clone the repository:
+
+```bash
+# Get the latest snapshot
+git clone https://github.com/balintdecsi/synthetic-haribros-watts-up.git myproject
+
+# Change directory
+cd myproject
+
+# Install dependencies
+python3 -m pip install -r requirements.txt
+```
+
+Note that you should have access to GPUs to run this code.
