@@ -9,6 +9,7 @@ To hand in the results please follow the following steps:
 4) Upload the synthetic data file on to the OneDrive folder where you downloaded the real data
 5) Name the synthetic data file after your group
 6) The synthetic data file should be in csv format, contain the datetime in the first column and every other column should represent a profile. (mMirroring the original dataset)
+7) upload your presentation to the OneDrive folder with your team name
 
 
 
